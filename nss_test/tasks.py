@@ -1,7 +1,26 @@
-from celery import Celery
+from datamodel import models
+import openpyxl
 
-app = Celery('tasks', broker='pyamqp://guest@localhost//')
+from celery import shared_task
 
-@app.task
-def add(x, y):
-    return x + y
+
+@shared_task
+def upload_data(excel_file):
+
+    # validations can be placed here to check file extension
+
+    wb = openpyxl.load_workbook(excel_file)
+
+    # getting a particular sheet by name out of many sheets
+
+    worksheet = wb["Sheet1"]
+    print(worksheet)
+    excel_data = list()
+    # iterating over the rows and
+    # getting value from each cell in row
+
+    for row in worksheet.iter_rows():
+        row_data = list()
+        for cell in row:
+            row_data.append(str(cell.value))
+            excel_data.append(row_data)
