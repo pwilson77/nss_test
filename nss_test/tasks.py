@@ -1,4 +1,4 @@
-from datamodel import models
+from datamodel.models import Datamodel
 import openpyxl
 
 from celery import shared_task
@@ -21,6 +21,7 @@ def upload_data(excel_file):
 
     for row in worksheet.iter_rows():
         row_data = list()
+        Datamodel.objects.create(firstname=row[A1], lastname=row[A2])
         for cell in row:
             row_data.append(str(cell.value))
             excel_data.append(row_data)
