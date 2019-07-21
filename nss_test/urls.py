@@ -22,6 +22,6 @@ app_name = "nss_test"
 
 urlpatterns = [
     path('', home_view, name='home'),
-    path('table/', list_datamodels, name='table'),
+    path('tables/', list_datamodels, name='table'),
     path('admin/', admin.site.urls)
 ]

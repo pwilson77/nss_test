@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,10 +22,37 @@
       tr:nth-child(even) {
         background-color: #dddddd;
       }
+
+      nav ul {
+        display: flex;
+        list-style-type: none;
+      }
+
+      nav ul li {
+        width: auto;
+        padding: 5px;
+      }
+
+      nav ul a {
+        color: black;
+        text-decoration: none;
+      }
+
+      nav ul a:hover {
+        text-decoration: underline;
+        font-weight: bolder;
+      }
     </style>
-    <title>Document</title>
+    <title>nss_test</title>
   </head>
   <body style="margin-top: 30px;margin-left: 30px;">
+    <nav>
+      <ul>
+        <a href="/uploads"><li>Upload history</li></a>
+        <a href="/tables"><li>Tables</li></a>
+        <a href="/"><li>Upload Excel file</li></a>
+      </ul>
+    </nav>
     {% block content %} replace me {% endblock %}
   </body>
 </html>
