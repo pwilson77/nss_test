@@ -11,7 +11,7 @@
   </tr>
   {% for my_sub_item in my_list %}
   <tr>
-    <td>{{ my_sub_item.id }}</td>
+    <td>{{ forloop.counter }}</td>
     <td>{{ my_sub_item.firstname }}</td>
     <td>{{ my_sub_item.lastname }}</td>
     <td>{{ my_sub_item.age }}</td>

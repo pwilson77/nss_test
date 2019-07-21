@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from pages.views import home_view
 from datamodel.views import list_datamodels
+from fileupload.views import list_fileuploads
 
 app_name = "nss_test"
 
 urlpatterns = [
     path('', home_view, name='home'),
     path('tables/', list_datamodels, name='table'),
+    path('uploads/', list_fileuploads, name='uploads'),
     path('admin/', admin.site.urls)
 ]

@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+<h2>File Uploads Info</h2>
+<table>
+  <tr>
+    <th>id</th>
+    <th>Filename</th>
+    <th>Date & Time Uploaded</th>
+  </tr>
+  {%for my_sub_item in my_list %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ my_sub_item.filename }}</td>
+    <td>{{ my_sub_item.date_uploaded }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock%}

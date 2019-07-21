@@ -31,3 +31,5 @@ def upload_data(excel_file):
         row_data.address = worksheet.cell(row=i, column=5).value
 
         row_data.save()
+
+    os.remove(excel_file)
