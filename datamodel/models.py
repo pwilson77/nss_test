@@ -4,8 +4,8 @@ from django.db import models
 
 
 class Datamodel(models.Model):
-    firstname = models.TextField()
-    lastname = models.TextField()
+    firstname = models.CharField(max_length=50)
+    lastname = models.CharField(max_length=50)
     age = models.IntegerField()
-    gender = models.TextField()
-    address = models.TextField()
+    gender = models.CharField(max_length=50)
+    address = models.CharField(max_length=50)

@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     # mine
     'nss_test',
     'pages',
-    'datamodel'
+    'datamodel',
+    'fileupload'
 ]
 
 MIDDLEWARE = [
