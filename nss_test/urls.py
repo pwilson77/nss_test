@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from pages.views import home_view
+from datamodel.views import list_datamodels
 
 app_name = "nss_test"
 
 urlpatterns = [
     path('', home_view, name='home'),
+    path('table/', list_datamodels, name='table'),
     path('admin/', admin.site.urls)
-
 ]

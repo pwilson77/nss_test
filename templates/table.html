@@ -1,0 +1,43 @@
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Address</th>
+  </tr>
+  {% for my_sub_item in my_list %}
+  <tr>
+    <td>{{ my_sub_item.firstname }}</td>
+    <td>{{ my_sub_item.lastname }}</td>
+    <td>{{ my_sub_item.age }}</td>
+    <td>{{ my_sub_item.gender }}</td>
+    <td>{{ my_sub_item.address }}</td>
+  </tr>
+  {% endfor %}
+  <!-- <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr> -->
+</table>
