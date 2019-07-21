@@ -127,3 +127,7 @@ STATIC_URL = '/static/'
 
 # Celery application definition
 CELERY_BROKER_URL = 'amqp://localhost'
+
+# media
+MEDIA_URL = '/excel_files/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'excel_files')
