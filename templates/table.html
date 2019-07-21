@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+<h2>Database Info</h2>
+<table>
+  <tr>
+    <th>id</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Address</th>
+  </tr>
+  {% for my_sub_item in my_list %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ my_sub_item.firstname }}</td>
+    <td>{{ my_sub_item.lastname }}</td>
+    <td>{{ my_sub_item.age }}</td>
+    <td>{{ my_sub_item.gender }}</td>
+    <td>{{ my_sub_item.address }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock%}
